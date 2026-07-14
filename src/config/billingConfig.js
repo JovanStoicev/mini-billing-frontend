@@ -2,6 +2,7 @@ export const INPUT_DIRECTORY = "src/main/resources/data";
 export const CONSUMER_REFERENCE = "1";
 export const SOFIA_OFFSET = "+03:00";
 export const DEFAULT_BILLING_MONTH = "2024-03";
+export const SUPPORTED_PRODUCTS = ["gas", "elec"];
 
 export const DEFAULT_READING_FORM = {
   product: "gas",
