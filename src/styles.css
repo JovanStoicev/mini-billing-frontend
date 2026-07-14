@@ -1,0 +1,43 @@
+body {
+  min-width: 320px;
+}
+
+.workspace-grid {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.panel {
+  border: 1px solid #dfe5ef;
+  padding: 20px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.metric-card {
+  border: 1px solid #dfe5ef;
+  padding: 16px;
+}
+
+.reading-item {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr) 100px;
+  gap: 12px;
+  align-items: center;
+  border-radius: 8px;
+  background: #f6f8fc;
+  padding: 10px 12px;
+}
+
+@media (max-width: 920px) {
+  .workspace-grid,
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
