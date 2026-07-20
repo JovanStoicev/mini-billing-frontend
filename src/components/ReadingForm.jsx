@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import { Plus } from "lucide-react";
 import { formatDate } from "../utils/date";
+import { hasProduct } from "../utils/productUtils";
 
 export function ReadingForm({
   form,
@@ -98,8 +99,4 @@ export function ReadingForm({
       </Stack>
     </Paper>
   );
-}
-
-function hasProduct(products, product) {
-  return products.includes(String(product || "").trim().toLowerCase());
 }

@@ -1,6 +1,6 @@
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 import { formatDate } from "../utils/date";
-import { formatMoney } from "../utils/format";
+import { formatDecimal, formatMoney } from "../utils/format";
 import { EmptyState } from "./EmptyState";
 import { SectionHeader } from "./SectionHeader";
 
@@ -31,8 +31,8 @@ export function InvoiceLinesTable({ lines = [] }) {
                   <TableCell>
                     {formatDate(line.lineStart)} - {formatDate(line.lineEnd)}
                   </TableCell>
-                  <TableCell align="right">{line.quantity}</TableCell>
-                  <TableCell align="right">{line.price}</TableCell>
+                  <TableCell align="right">{formatDecimal(line.quantity)}</TableCell>
+                  <TableCell align="right">{formatDecimal(line.price)}</TableCell>
                   <TableCell align="right">{formatMoney(line.amount)}</TableCell>
                 </TableRow>
               ))}
